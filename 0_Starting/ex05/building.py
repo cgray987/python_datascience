@@ -22,14 +22,21 @@ def word_count(s: str) -> int:
 
 
 def main():
-    ac = len(sys.argv)
+    try:
+        ac = len(sys.argv)
 
-    assert ac <= 2, "Too many arguments for this puny program"
-    if ac == 1:
-        s = input("Give me a string: ")
-    else:
-        s = sys.argv[1]
-    word_count(s)
+        if ac > 2:
+            raise AssertionError("Too many arguments for this puny program")
+        if ac == 1:
+            try:
+                s = input("What is the text to count?\n") + "\n"
+            except EOFError:
+                return
+        else:
+            s = sys.argv[1]
+        word_count(s)
+    except AssertionError as e:
+        print(f"AssertionError: {str(e)}")
 
 
 if __name__ == "__main__":
