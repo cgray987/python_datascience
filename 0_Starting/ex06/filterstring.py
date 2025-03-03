@@ -21,8 +21,8 @@ def main():
         if input_str.find("!”#$%&'()*+,-./:;<=>?@[\\]^_`{|}~") != -1:
             raise AssertionError("the arguments are bad")
 
-        def L(word): lambda word: len(word) > min_word_len
-        filtered = list(ft_filter(L, input_str.split(" ")))
+        filtered = list(ft_filter(lambda word: len(word) > min_word_len,
+                                  input_str.split(" ")))
         print(filtered)
 
     except AssertionError or ValueError as e:
