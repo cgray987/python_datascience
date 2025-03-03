@@ -13,9 +13,9 @@ def main():
         raise AssertionError("argument is not an integer")
 
     if num % 2 == 0:
-        print("I'm Even")
+        print("I'm Even.")
     else:
-        print("I'm Odd")
+        print("I'm Odd.")
 
 
 if __name__ == "__main__":
