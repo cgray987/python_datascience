@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling", "packaging>=23.0"]
+build-backend = "hatchling.build"
+[tool.hatch.build.targets.wheel]
+packages = ["src/ft_package"]
+
+[project]
+name = "ft_package"
+version = "0.0.1"
+authors = [
+  { name="Cullen Gray", email="cgray@students.42prague.com" },
+]
+description = "A small example package"
+dependencies = [
+    "packaging>=23.0"
+]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE"]
+
+[project.urls]
+Homepage = "https://github.com/cgray987/ft_package"
+Issues = "https://github.com/cgray987/ft_package/issues"

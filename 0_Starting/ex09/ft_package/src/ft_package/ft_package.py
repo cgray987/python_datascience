@@ -1,4 +1,7 @@
-import sys
+def count_in_list(lst: list[str], search: str) -> int:
+    """Returns an int of how many times 'search'
+    appears in 'lst'"""
+    return lst.count(search)
 
 
 def morse_translate(string) -> str:
@@ -53,19 +56,12 @@ def morse_translate(string) -> str:
     return " ".join(morse_code)
 
 
-def main():
-    """take a string as an arg, turn to morse code, ???, profit!"""
-    try:
-        ac = len(sys.argv)
-        if ac != 2:
-            raise AssertionError("the arguments are bad")
-
-        res = morse_translate(sys.argv[1])
-        print(res)
-
-    except AssertionError as e:
-        print(f"Assertion Error: {str(e)}")
+def banana_size(nbr: int) -> str:
+    """Converts given int to banana scale
+    (1 banana == 7 inches)"""
+    return f"{nbr / 7:.2f} bananas"
 
 
-if __name__ == "__main__":
-    main()
+def duck_translate(text: str) -> str:
+    """Translates given text to language a duck could understand."""
+    return " quack ".join(text.split())
