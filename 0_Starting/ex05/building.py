@@ -29,9 +29,17 @@ def main():
             raise AssertionError("Too many arguments for this puny program")
         if ac == 1:
             try:
-                s = input("What is the text to count?\n") + "\n"
+                print("What is the text to count?")
+                s = ""
+                # this is silly, but in order to handle both EOF and \n.
+                # input would be much simpler.
+                while True:
+                    char = sys.stdin.read(1)
+                    s += char
+                    if not char or char == "\n":
+                        break
             except EOFError:
-                return
+                pass
         else:
             s = sys.argv[1]
         word_count(s)
