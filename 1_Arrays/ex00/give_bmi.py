@@ -1,7 +1,9 @@
 def give_bmi(
         height: list[int | float],
         weight: list[int | float]) -> list[int | float]:
-    """Returns BMI (body-mass index) from given list of heights/weights"""
+    """
+    Returns BMI (body-mass index) from given list of heights/weights
+    """
     try:
         if len(height) != len(weight):
             raise ValueError("lists of height and weights must be same size")
@@ -22,7 +24,9 @@ def give_bmi(
 def apply_limit(
         bmi: list[int | float],
         limit: int) -> list[bool]:
-    """Returns true for each given bmi over given limit"""
+    """
+    Returns true for each given bmi over given limit
+    """
     try:
         if not isinstance(limit, (int, float)):
             raise TypeError("limit must be int or float")
