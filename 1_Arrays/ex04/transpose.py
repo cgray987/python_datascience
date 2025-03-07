@@ -51,7 +51,7 @@ def get_abs_path(path: str) -> os.path:
 
 def rotate(img: Image) -> Image:
     """
-    rotates image by swaping x and y dimensions,
+    rotates image by swapping x and y dimensions,
     manually for some god-forsaken reason
     """
     w, h = img.size
