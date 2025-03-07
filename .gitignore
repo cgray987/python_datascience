@@ -1,7 +1,9 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+*/__pycache__/
 *.py[cod]
 *$py.class
+*/new_imgs/
 
 # C extensions
 *.so
@@ -169,3 +171,4 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+1_Arrays/ex03/new_imgs/*

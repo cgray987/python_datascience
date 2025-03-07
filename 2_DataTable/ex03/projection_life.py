@@ -11,10 +11,10 @@ def main():
     gdp = load("income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
 
     year = '1900'
-    gdp_1900 = gdp[year]
-    life_1900 = life_expectancy[year]
+    gdp_year = gdp[year]
+    life_year = life_expectancy[year]
 
-    plt.scatter(gdp_1900, life_1900)
+    plt.scatter(gdp_year, life_year)
     plt.title(f"Life expectancy vs GDP in year {year}")
     plt.xscale("log")
     plt.xlabel("gross domestic product (per person)")

@@ -67,6 +67,7 @@ if __name__ == "__main__":
 
 """
     I added all of this before realizing I could let pyplot handle scaling
+
     max_num = max(max(data_num), max(comp_num))
     min_num = min(min(data_num), min(comp_num))
     scale = int(np.log10(max_num)) - 1
