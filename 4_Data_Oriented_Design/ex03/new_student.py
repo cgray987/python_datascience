@@ -12,7 +12,7 @@ dataclass.field():
         default: if true, that field will be a default value
 dataclass.__post_init__():
     When defined, it will be called by generated __init__. Used for
-    initializing fileds dependant on other fields.
+    initializing fields dependant on other fields.
 """
 
 
