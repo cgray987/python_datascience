@@ -43,4 +43,5 @@ class Student:
     id: str = field(init=False, default=generate_id())
 
     def __post_init__(self):
+        """post_init method to create login based on name/surname"""
         self.login = self.name[0].capitalize() + self.surname.lower()
